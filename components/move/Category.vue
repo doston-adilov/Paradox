@@ -54,7 +54,6 @@
 <script>
 
 import { VueNestable, VueNestableHandle } from 'vue-nestable'
-import { mapState } from "vuex";
 
 export default {
     components: {
