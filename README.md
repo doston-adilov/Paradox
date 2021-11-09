@@ -1,3 +1,5 @@
+![alt text](https://github.com/doston-adilov/Paradox/blob/main/image.jpg?raw=true)
+
 # Paradox | Тестовое задание Документы
 
 ## Чтобы установить запустить
