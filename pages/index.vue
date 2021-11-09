@@ -1,7 +1,6 @@
 <template>
   <div>
     <Header />
-    {{ test }}
     <section class="mt-6">
 
       <Search @isSearch="getEmit"/>

@@ -1,7 +1,6 @@
 <template>
     <VueNestable
         v-model="categories"
-
         cross-list
         group="cross"
         :max-depth="2"
@@ -9,7 +8,6 @@
             'beforeMove': beforeMove
         }"
         >
-            
             <template slot-scope="{ item, isChild }">
                 
                 <div class="drag-content flex justify-between">
@@ -89,68 +87,4 @@ export default {
 }
 </script>
 
-<style lang="postcss">
-.expan .btn-collapse {
-    @apply transform scale-110 -rotate-180 !important;
-}
-.expan .nestable-list {
-    @apply h-0 !important;
-} 
-.nestable-item .nestable-list {
-    @apply relative h-full overflow-hidden;
-} 
-
-.nestable, .nestable-item {
-    @apply relative;
-  }
-  .nestable-item + .nestable-item .nestable-item-content {
-    @apply border-t-0;
-  }
-  .nestable-item .nestable-item-content {
-    @apply border border-gray-150 px-4 py-3;
-  }
-  .nestable-item .nestable-list .nestable-item .nestable-item-content .drag-title, 
-   .nestable-item .nestable-list .nestable-item .nestable-item-content .drag-required,
-   .nestable-item .nestable-list .nestable-item .nestable-item-content .drag-drag-description {
-    @apply text-sm !important;
-  }
-  .nestable-item .nestable-list .nestable-item .nestable-item-content {
-    @apply border border-t-0 border-gray-150 px-4 py-2 !important;
-  }
-  .nestable-handle {
-    @apply flex items-center;
-  }
-  .nestable-item .nestable-list
-  {
-    @apply ml-4;
-  }
-  .nestable-item.is-dragging .nestable-list {
-    @apply pointer-events-none;
-  }
-  .nestable-item.is-dragging * {
-    @apply opacity-0;
-
-    filter: alpha(opacity=0);
-  }
-  .nestable-item.is-dragging:before {
-    @apply absolute top-0 left-0 right-0 bottom-0;
-    content: ' ';
-    background-color: rgba(106, 127, 233, 0.274);
-    border: 1px dashed rgb(73, 100, 241);
-  }
-  .nestable-drag-layer {
-    @apply fixed top-0 left-0 right-0 bottom-0 h-full flex justify-between select-none pointer-events-none z-50;
-
-  }
-  .nestable-drag-layer > .nestable-list {
-    @apply absolute top-0 left-0 p-0 bg-white border border-t-0 border-gray-150 px-4 py-2 !important;
-    box-shadow: 0px 3px 16px rgba(0, 102, 255, 0.7)
-  }
-  .nestable [draggable="true"] {
-    @apply cursor-move
-  }
-  .nestable-handle {
-    @apply inline
-  }
-</style>
 
