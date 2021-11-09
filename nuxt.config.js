@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Smart Hub',
+    title: 'Paradox',
     htmlAttrs: {
       lang: 'en'
     },
@@ -41,39 +41,7 @@ export default {
 
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    baseURL: 'http://127.0.0.1:8000/api'
-  },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-
-  auth: {
-    strategies: {
-      'laravelJWT': {
-        provider: 'laravel/jwt',
-        url: 'http://127.0.0.1:8000/api',
-        endpoints: {
-          login: {
-            url: '/auth/login', method: 'post', propertyName: 'access_token'
-          },
-          user: {
-            url: '/auth/profile', method: 'get', propertyName: 'data'
-          },
-          logout: {
-            
-          }
-        },
-        token: {
-          property: 'access_token',
-          maxAge: 60 * 60
-        },
-        refreshToken: {
-          maxAge: 20160 * 60
-        },
-      },
-    }
-  }
 }
